@@ -1,8 +1,8 @@
 .jumbotron {
   text-align: center;
-  background: url("space.jpg");
+  background: url("../images/space.jpg");
 }
 
 .text {
-  color: #ffffff;
+  display: none;
 }
