@@ -10,14 +10,25 @@ $('document').ready(function() {
     "WHO PROPOSED THE 3 LAWS OF PLANETARY MOTION?",
   ];
 
+  //timer
+  var counter = 30;
+
+  function time() {
+    counter--;
+    $("#time").html(counter);
+  }
+
+//Start Game
   $("#start").on("click", function() {
+    setInterval(time, 1000);
     $("#start").hide(1000);
     $(".game").show(1000);
     $(".text").show(1000);
 
     //Pick a questions a answers.
     for (var i = 0; i < questions.length; i++) {
-      
+      $("#question").html(questions[i]);
+
     }
 
 
