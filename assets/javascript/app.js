@@ -15,9 +15,9 @@ $('document').ready(function() {
      "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto",
      "Mars, Mercury, Venus, Earth, Jupiter, Saturn, Uranus, Neptune, Pluto"],
 
-    ["Aprox. 6 billion miles."
-      "Aprox. 9 billion miles."
-      "Aprox. 6 billion miles."
+    ["Aprox. 6 billion miles.",
+      "Aprox. 9 billion miles.",
+      "Aprox. 6 billion miles.",
       "Aprox. 6 billion miles."],
 
     ["Europa",
@@ -39,10 +39,12 @@ $('document').ready(function() {
       "sirius",
       "Regulus",
       "Capella"],
+
    ["A small particle from a comet or asteroid orbiting the sun",
       "The light phenomenon which results when a meteoroid enters the Earth's atmosphere",
       "A relatively small, inactive, rocky body orbiting the Sun",
       "A relatively small, at times active, object whose ices can vaporize in sunlight forming an atmosphere of dust and gas and sometimes a tail of dust and/or gas.",],
+
    ["Nicolaus Copericus",
     "Galileo Galilei",
     "Johannes Kepler",
