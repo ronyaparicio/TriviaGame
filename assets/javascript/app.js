@@ -9,7 +9,7 @@ $('document').ready(function() {
     "DEFINE A METEOR.",
     "WHO PROPOSED THE 3 LAWS OF PLANETARY MOTION?",
   ];
-  var answers = [
+  var answers = {
     ["Mercury, Mars, Earth, Venus, Jupiter, Saturn, Uranus, Neptune, Pluto",
      "Mars, Mercury, Venus, Earth, Jupiter, Saturn, Uranus, Neptune, Pluto",
      "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto",
@@ -49,7 +49,7 @@ $('document').ready(function() {
     "Galileo Galilei",
     "Johannes Kepler",
     "Carl Sagan"]
-  ];
+  };
 
 
   //timer
@@ -70,6 +70,10 @@ $('document').ready(function() {
     //Pick a questions a answers.
     for (var i = 0; i < questions.length; i++) {
       $("#question").html(questions[i]);
+      #("#").html(answer[i])
+      while (counter > 0) {
+
+      }
 
 
     }
