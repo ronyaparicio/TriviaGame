@@ -20,22 +20,33 @@ $('document').ready(function() {
       "Aprox. 6 billion miles."
       "Aprox. 6 billion miles."],
 
-     ["Europa",
-      "Sao",
-      "Titan",
-      "Moon"],
+    ["Europa",
+     "Sao",
+     "Titan",
+     "Moon"],
 
-     ["29 million miles",
+   ["29 million miles",
       "66 million miles",
       "93 million miles",
       "142 million miles"],
 
-     ["White Giant",
+   ["White Giant",
       "Neutron Star",
       "Red Supergiant",
       "Yellow Dwarf"],
-     [],
-     [],
+
+   ["Betelguse",
+      "sirius",
+      "Regulus",
+      "Capella"],
+   ["A small particle from a comet or asteroid orbiting the sun",
+      "The light phenomenon which results when a meteoroid enters the Earth's atmosphere",
+      "A relatively small, inactive, rocky body orbiting the Sun",
+      "A relatively small, at times active, object whose ices can vaporize in sunlight forming an atmosphere of dust and gas and sometimes a tail of dust and/or gas.",],
+   ["Nicolaus Copericus",
+    "Galileo Galilei",
+    "Johannes Kepler",
+    "Carl Sagan"]
   ];
 
 
