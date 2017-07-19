@@ -1,4 +1,7 @@
 $('document').ready(function() {
+  var corretAnswers = 0;
+  var incorrectAnswers = 0;
+  var i = 0;
   var questions = [
     "PUT THE PLANETS IN ORDER FROM THE SUN?",
     "HOW MANY MILES ARE IN A LIGHT YEAR?",
@@ -9,46 +12,69 @@ $('document').ready(function() {
     "DEFINE A METEOR.",
     "WHO PROPOSED THE 3 LAWS OF PLANETARY MOTION?",
   ];
-  var answers = {
-    ["Mercury, Mars, Earth, Venus, Jupiter, Saturn, Uranus, Neptune, Pluto",
-     "Mars, Mercury, Venus, Earth, Jupiter, Saturn, Uranus, Neptune, Pluto",
-     "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto",
-     "Mars, Mercury, Venus, Earth, Jupiter, Saturn, Uranus, Neptune, Pluto"],
+  var answers = [
+    {
+      answer1: "Mercury, Mars, Earth, Venus, Jupiter, Saturn, Uranus, Neptune, Pluto",
+      answer2: "Mars, Mercury, Venus, Earth, Jupiter, Saturn, Uranus, Neptune, Pluto",
+      answer3: "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto",
+      answer4: "Mars, Mercury, Venus, Earth, Jupiter, Saturn, Uranus, Neptune, Pluto"
+   },
 
-    ["Aprox. 6 billion miles.",
-      "Aprox. 9 billion miles.",
-      "Aprox. 6 billion miles.",
-      "Aprox. 6 billion miles."],
+    {
+      answer1: "Aprox. 6 billion miles.",
+      answer2: "Aprox. 9 billion miles.",
+      answer3: "Aprox. 6 billion miles.",
+      answer3: "Aprox. 6 billion miles."
+    },
 
-    ["Europa",
-     "Sao",
-     "Titan",
-     "Moon"],
+    {
+      answer1: "Europa",
+      answer2: "Sao",
+      answer3: "Titan",
+      answer4: "Moon"
+   },
 
-   ["29 million miles",
-      "66 million miles",
-      "93 million miles",
-      "142 million miles"],
+   {
+      answer1: "29 million miles",
+      answer2: "66 million miles",
+      answer3: "93 million miles",
+      answer4: "142 million miles"
+    },
 
-   ["White Giant",
-      "Neutron Star",
-      "Red Supergiant",
-      "Yellow Dwarf"],
+   {
+      answer1: "White Giant",
+      answer2: "Neutron Star",
+      answer3: "Red Supergiant",
+      answer4: "Yellow Dwarf"
+    },
 
-   ["Betelguse",
-      "sirius",
-      "Regulus",
-      "Capella"],
+   {
+      answer1: "Betelguse",
+      answer2: "sirius",
+      answer3: "Regulus",
+      answer4: "Capella"
+    },
 
-   ["A small particle from a comet or asteroid orbiting the sun",
-      "The light phenomenon which results when a meteoroid enters the Earth's atmosphere",
-      "A relatively small, inactive, rocky body orbiting the Sun",
-      "A relatively small, at times active, object whose ices can vaporize in sunlight forming an atmosphere of dust and gas and sometimes a tail of dust and/or gas.",],
+    {
+      answer1: "A small particle from a comet or asteroid orbiting the sun",
+      answer2: "The light phenomenon which results when a meteoroid enters the Earth's atmosphere",
+      answer3: "A relatively small, inactive, rocky body orbiting the Sun",
+      answer4: "A relatively small, at times active, object whose ices can vaporize in sunlight forming an atmosphere of dust and gas and sometimes a tail of dust and/or gas."
+    },
 
-   ["Nicolaus Copericus",
-    "Galileo Galilei",
-    "Johannes Kepler",
-    "Carl Sagan"]
+   {
+     answer1: "Nicolaus Copericus",
+     answer2: "Galileo Galilei",
+     answer3: "Johannes Kepler",
+     answer4: "Carl Sagan"
+  }
+  ];
+  function update () {
+    $("#question").html(questions[i]);
+    $("#answer1").html(answers[i].answer1);
+    $("#answer2").html(answers[i].answer2);
+    $("#answer3").html(answers[i].answer3);
+    $("#answer4").html(answers[i].answer4);
   };
 
 
@@ -66,19 +92,64 @@ $('document').ready(function() {
     $("#start").hide(1000);
     $(".game").show(1000);
     $(".text").show(1000);
+    update();
+  });
 
-    //Pick a questions a answers.
-    for (var i = 0; i < questions.length; i++) {
-      $("#question").html(questions[i]);
-      #("#").html(answer[i])
-      while (counter > 0) {
-
-      }
-
+  $("#answer1").on("click", function(){
+    if (question[4]) {
+      corretAnswers++;
+      i++;
+      counter = 30;
+      update();
+    } else if (!question[4]) {
+      incorrectAnswers++;
+      i++;
+      counter = 30;
+      update();
+    }
+  });
+  $("#answer2").on("click", function(){
+    if (question[5]||question[6]) {
+      corretAnswers++;
+      i++;
+      counter = 30;
+      update();
+    } else if () {
+      incorrectAnswers++;
+      i++;
+      counter = 30;
+      update();
 
     }
-
-
   });
+  $("#answer3"). on("click", function() {
+    if (question[0]||question[1]||question[3]||question[7]) {
+      corretAnswers++;
+      i++;
+      counter = 30;
+      update();
+    } else if (true) {
+      incorrectAnswers++;
+      i++;
+      counter = 30;
+      update();
+    }
+  });
+  $("#answer4").on("click", function(){
+    if (questions[2]) {
+      corretAnswers++;
+      i++;
+      counter = 30;
+      update();
+    } else if (true) {
+      incorrectAnswers++;
+      i++;
+      counter = 30;
+      update();
+
+    }
+  })
+
+
 
 });
