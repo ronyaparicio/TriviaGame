@@ -80,11 +80,20 @@ $('document').ready(function() {
 
   //timer
   var counter = 30;
-
   function time() {
     counter--;
     $("#time").html(counter);
+  };
+  //check timer
+  function checkTimer() {
+    if (counter === 0) {
+      incorrectAnswers++;
+      i++;
+      counter = 30;
+      update();
+    }
   }
+  setInterval(checkTimer, 500);
 
 //Start Game
   $("#start").on("click", function() {
@@ -101,7 +110,7 @@ $('document').ready(function() {
       i++;
       counter = 30;
       update();
-    } else if (!i === 4) {
+    } else if (i!==4) {
       incorrectAnswers++;
       i++;
       counter = 30;
@@ -114,7 +123,7 @@ $('document').ready(function() {
       i++;
       counter = 30;
       update();
-    } else if (!i === 5 || !i === 6) {
+    } else if (i !== 5 || i !== 6) {
       incorrectAnswers++;
       i++;
       counter = 30;
@@ -122,7 +131,7 @@ $('document').ready(function() {
 
     }
   });
-  $("#answer3"). on("click", function() {
+  $("#answer3").on("click", function() {
     if (i === 0||i === 1 || i === 3 ||i === 7 ) {
       corretAnswers++;
       i++;
@@ -141,7 +150,7 @@ $('document').ready(function() {
       i++;
       counter = 30;
       update();
-    } else if (!i === 2) {
+    } else if (i !== 2) {
       incorrectAnswers++;
       i++;
       counter = 30;

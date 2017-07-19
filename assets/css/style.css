@@ -29,3 +29,8 @@ a:hover {
   font-size: 25px;
   color: #fff;
 }
+
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
