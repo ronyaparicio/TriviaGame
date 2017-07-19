@@ -96,12 +96,12 @@ $('document').ready(function() {
   });
 
   $("#answer1").on("click", function(){
-    if (question[4]) {
+    if (i === 4) {
       corretAnswers++;
       i++;
       counter = 30;
       update();
-    } else if (!question[4]) {
+    } else if (!i === 4) {
       incorrectAnswers++;
       i++;
       counter = 30;
@@ -109,12 +109,12 @@ $('document').ready(function() {
     }
   });
   $("#answer2").on("click", function(){
-    if (question[5]||question[6]) {
+    if (i === 5||i === 6) {
       corretAnswers++;
       i++;
       counter = 30;
       update();
-    } else if () {
+    } else if (!i === 5 || !i === 6) {
       incorrectAnswers++;
       i++;
       counter = 30;
@@ -123,12 +123,12 @@ $('document').ready(function() {
     }
   });
   $("#answer3"). on("click", function() {
-    if (question[0]||question[1]||question[3]||question[7]) {
+    if (i === 0||i === 1 || i === 3 ||i === 7 ) {
       corretAnswers++;
       i++;
       counter = 30;
       update();
-    } else if (true) {
+    } else if (i === 2 || i === 4 || i === 5 ||i === 6) {
       incorrectAnswers++;
       i++;
       counter = 30;
@@ -136,19 +136,19 @@ $('document').ready(function() {
     }
   });
   $("#answer4").on("click", function(){
-    if (questions[2]) {
+    if (i === 2) {
       corretAnswers++;
       i++;
       counter = 30;
       update();
-    } else if (true) {
+    } else if (!i === 2) {
       incorrectAnswers++;
       i++;
       counter = 30;
       update();
 
     }
-  })
+  });
 
 
 
