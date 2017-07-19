@@ -103,7 +103,7 @@ $('document').ready(function() {
     $(".text").show(1000);
     update();
   });
-
+//check if answer is correct and move on to next question
   $("#answer1").on("click", function(){
     if (i === 4) {
       corretAnswers++;
