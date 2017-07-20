@@ -71,9 +71,9 @@ $('document').ready(function() {
      answer4: "Carl Sagan"
   },
   {
-    answer1: setInterval(corretAnswers, 500),
-    answer2: setInterval(incorrectAnswers, 500),
-    answer3: setInterval(unAnswered, 500),
+    answer1: setInterval(function() { return corretAnswers;} , 500),
+    answer2: setInterval(function() { return incorrectAnswers;}, 500),
+    answer3: setInterval(function() { return unAnswered;}, 500),
     answer4: "Start Over"
   }
   ];
