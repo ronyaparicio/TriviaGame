@@ -1,6 +1,7 @@
 $('document').ready(function() {
   var corretAnswers = 0;
   var incorrectAnswers = 0;
+  var unAnswered = 0;
   var i = 0;
   var questions = [
     "PUT THE PLANETS IN ORDER FROM THE SUN?",
@@ -11,6 +12,7 @@ $('document').ready(function() {
     "WHICH STAR IS THE BRIGHTEST?",
     "DEFINE A METEOR.",
     "WHO PROPOSED THE 3 LAWS OF PLANETARY MOTION?",
+    "All done this is how you did"
   ];
   var answers = [
     {
@@ -67,9 +69,16 @@ $('document').ready(function() {
      answer2: "Galileo Galilei",
      answer3: "Johannes Kepler",
      answer4: "Carl Sagan"
+  },
+  {
+    answer1: setInterval(corretAnswers, 500),
+    answer2: setInterval(incorrectAnswers, 500),
+    answer3: setInterval(unAnswered, 500),
+    answer4: "Start Over"
   }
   ];
-  function update () {
+
+  function update() {
     $("#question").html(questions[i]);
     $("#answer1").html(answers[i].answer1);
     $("#answer2").html(answers[i].answer2);
@@ -83,18 +92,15 @@ $('document').ready(function() {
   function time() {
     counter--;
     $("#time").html(counter);
-  };
-  //check timer
-  function checkTimer() {
     if (counter === 0) {
-      incorrectAnswers++;
+      unAnswered++;
       i++;
       counter = 30;
       update();
     }
-  }
-  setInterval(checkTimer, 500);
-
+    console.log(unAnswered)
+  };
+  //check timer
 //Start Game
   $("#start").on("click", function() {
     setInterval(time, 1000);
@@ -155,9 +161,9 @@ $('document').ready(function() {
       i++;
       counter = 30;
       update();
-
     }
   });
+
 
 
 
