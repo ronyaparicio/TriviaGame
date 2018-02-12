@@ -1,19 +1,15 @@
 .jumbotron {
   text-align: center;
   background: url("../images/space.jpg");
-  height: 700px;
+  height: 70vh;
   color: #fff;
 
 }
 
-#start {
-  margin-top: 275px;
-}
 
-.text {
-  display: none;
-}
-.game {
+
+
+#game {
   display:none;
 }
 

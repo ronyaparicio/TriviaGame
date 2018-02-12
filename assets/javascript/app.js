@@ -163,8 +163,4 @@ $('document').ready(function() {
       update();
     }
   });
-
-
-
-
 });

@@ -10,20 +10,29 @@
   <body>
     <div class="container-flex">
       <div class="page-header">
-        <h1>Trivia Game</h1>
+        <h1>Trivia Games</h1>
       </div>
       <div class="jumbotron">
-        <button type="button" name="button" id="start" class="btn btn-lg">Start</button>
-        <h1 class="text">Time Remaining: <span id="time"></span> Seconds</h1>
-        <p class="game" id="question"></p>
-        <a class="game" id="answer1" href="#">Answer1</a>
-        <a class="game" id="answer2" href="#">Answer2</a>
-        <a class="game" id="answer3" href="#">Answer3</a>
-        <a class="game" id="answer4" href="#">Answer4</a>
+        <div class="categories">
+          <button type="button" class="btn btn-lg start" value="constellations">Constellations</button>
+          <button type="button" class="btn btn-lg start" value="movie">Movie</button>
+          <button type="button" class="btn btn-lg start" value="geography">Geography</button>
+          <button type="button" class="btn btn-lg start" value="science">Science</button>
+        </div>
+
+        <div id="game">
+          <h2 class="text">Time Remaining: <span id="time"></span> Seconds</h2>
+          <button class="answers"></button>
+          <button class="answers"></button>
+          <button class="answers"></button>
+          <button class="answers"></button>
+        </div>
       </div>
+      
+      
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/app2.js"></script>
   </body>
 </html>
